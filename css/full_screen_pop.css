@@ -1,0 +1,18 @@
+.inner-content {
+  height: 100%;
+}
+.video-cont {
+  background: -webkit-linear-gradient(#a91633, #a2132f);
+  background: -o-linear-gradient(#a91633, #a2132f);
+  background: -moz-linear-gradient(#a91633, #a2132f);
+  background: linear-gradient(#a91633, #a2132f);
+  height: 100%;
+  position: relative;
+  z-index: 998;
+}
+.video-cont video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

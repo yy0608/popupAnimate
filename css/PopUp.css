@@ -1,0 +1,51 @@
+body {
+  font-size: 16px;
+  font-family: "Î¢ÈíÑÅºÚ";
+}
+
+.video-cont {
+  position: relative;
+}
+
+.video-cont .content {
+  width: 800px;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  margin-left: -410px;
+  color: #ead309!important;
+  overflow: auto;
+  height: 340px;
+  text-align: center;
+  background: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.video-cont .content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.video-cont .content::-webkit-scrollbar-track-piece {
+  background: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 6px;
+}
+
+.video-cont .content::-webkit-scrollbar-thumb:vertical {
+  background: rgba(234, 211, 9, .5);
+  opacity: 0.2;
+  -webkit-border-radius: 6px;
+  height: 20px;
+}
+
+.video-cont .content::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  -webkit-border-radius: 6px;
+}
+
+.video-cont p {
+  margin: 10px;
+  text-indent: 24px;
+  text-align: left;
+}

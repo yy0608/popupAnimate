@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/PopUp.css" />
+  <link rel="stylesheet" href="css/popupAnimate.css">
+</head>
+<body>
+  <audio id="music" src="media/new_year.mp3"></audio>
+  <button onclick="popup()">弹窗</button>
+</body>
+<script src="js/layer.js"></script>
+<script>
+function popup () {
+  music.play();
+  yjyLayer.content({
+    content: '\
+      <div class="video-cont"><div class="animate-background">\
+      <div class="stars-cont" id="starsCont"></div>\
+      <div class="firecraker firecraker1"></div>\
+      <div class="firecraker firecraker2"></div>\
+      <div class="lantern lantern-1"></div>\
+      <div class="lantern lantern-2"></div>\
+      <div class="lantern lantern-3"></div>\
+      <div class="lantern lantern-4"></div>\
+      <div class="top"></div>\
+      <div class="bottom"></div>\
+    </div>\
+    <div class="content">\
+      <h2>我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题</h2>\
+      <p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p><p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p><p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p>\
+    </div>',
+    width: '900px',
+    height: '510px'
+  })
+
+  appendBackground()
+
+  document.querySelector('.close-btn').addEventListener('click', function () {
+    music.pause()
+  }, false)
+}
+
+function appendBackground () {
+  var starStr = ''
+  var baseWidth = starsCont.clientWidth
+  var baseHeight = starsCont.clientHeight
+  for (var i = 0; i < 20; i++) {
+    var radius  = parseInt(10 + Math.random() * 10) + 'px'
+    var opacity = (0.5 + Math.random()).toFixed(2)
+    var duration = (8 +Math.random() * 2).toFixed(2) + 's'
+    var delay = (Math.random() * 5).toFixed(2) + 's'
+    var needLeft = parseInt(Math.random() * baseWidth) + 'px'
+    var needTop = parseInt(Math.random() * baseHeight) + 'px'
+    starStr += '<i style="width: ' + radius +';height:' + radius + ';left:' + needLeft + ';top:' + needTop + ';opacity:' + opacity + ';animation-duration: ' + duration + ';-webkit-animation-duration: ' + duration + ';-moz-animation-duration: ' + duration + ';-ms-animation-duration: ' + duration + ';-o-animation-duration: ' + duration + ';animation-delay:' + delay + ';-webkit-animation-delay:' + delay + ';-ms-animation-delay:' + delay + ';-moz-animation-delay:' + delay + ';-o-animation-delay:' + delay + ';box-shadow: 0 0 ' + radius + ' yellow;' + ';"></i>'
+  }
+  starsCont.appendChildAdvanced(starStr)
+}
+</script>
+</html>

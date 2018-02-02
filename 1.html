@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/PopUp.css" />
+</head>
+<body>
+  <audio id="music" src="media/new_year.mp3"></audio>
+
+  <button onclick="popup()">弹窗</button>
+</body>
+<script src="js/layer.js"></script>
+<script>
+function popup () {
+  music.play();
+  yjyLayer.content({
+    content: '<div class="video-cont"><video src="media/new_year2.mp4" autoplay width="100%" height="100%" loop></video><div class="content"><h2>我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题</h2><p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p><p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p><p>我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容我是段落内容</p></div></div>',
+    width: '900px',
+    height: '510px'
+  })
+
+  document.querySelector('.close-btn').addEventListener('click', function () {
+    music.pause()
+  }, false)
+}
+
+
+</script>
+</html>
